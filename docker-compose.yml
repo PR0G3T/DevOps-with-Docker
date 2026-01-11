@@ -1,6 +1,6 @@
 services:
   express-app:
-    image: YOUR_DOCKERHUB_USERNAME/express-app:latest
+    image: pr0g3t/express-app:latest
     container_name: express-app
     ports:
       - "3000:3000"
