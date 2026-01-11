@@ -1,8 +1,7 @@
-FROM python:3.9-alpine
-
-WORKDIR /usr/src/app
-COPY index.html .
-
-EXPOSE 8000
-
-CMD ["python3", "-m", "http.server", "8000"]
+FROM node:22-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+EXPOSE 3000
+CMD ["npm","start"]
